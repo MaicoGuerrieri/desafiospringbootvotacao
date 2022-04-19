@@ -1,0 +1,17 @@
+server: 
+ port: 8082
+ servlet:
+    context-path: /springboot/api
+    
+    
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      uri: ${MONGO_DB_URI:mongodb+srv://springbootjava:91519395spring@cluster0.6vgmr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority}
+      auto-index-creation: true
+
+
+springdoc:
+  swagger-ui:
+    path: /swagger
