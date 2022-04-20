@@ -8,7 +8,7 @@ spring:
   data:
     mongodb:
       authentication-database: admin
-      uri: ${MONGO_DB_URI:mongodb+srv://springbootjava:91519395spring@cluster0.6vgmr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority}
+      uri: ${MONGO_DB_URI:mongodb+srv://springbootjava:91519395@cluster0.6vgmr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority}
       auto-index-creation: true
 
 

@@ -1,14 +1,18 @@
-package com.maicolimaguerrieri.springbootjava.application.api.associado;
+package com.maicolimaguerrieri.springbootjava.application.api.assembleia;
 
 import javax.validation.Valid;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-public interface AssociadoAPI {
+
+
+public interface AssembleiaAPI {
+	
 	@PostMapping 
     @ResponseStatus(code = HttpStatus.CREATED) 
-    AssociadoCriadoResponse postNovoAssociado(@RequestBody @Valid AssociadoNovoRequest associadoNovo);
+   AssembleiaCriadoResponse novaAssembleia(@RequestBody @Valid AssembleiaNovoRequest novaAssembleia);
 
 }

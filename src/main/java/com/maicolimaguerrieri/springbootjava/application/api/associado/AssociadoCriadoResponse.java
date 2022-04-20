@@ -1,10 +1,8 @@
 package com.maicolimaguerrieri.springbootjava.application.api.associado;
 
 import java.util.UUID;
-
 import com.maicolimaguerrieri.springbootjava.domain.Associado;
 import com.maicolimaguerrieri.springbootjava.domain.SexoAssociado;
-
 import lombok.Data;
 
 @Data

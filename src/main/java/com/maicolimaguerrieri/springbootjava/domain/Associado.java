@@ -1,15 +1,11 @@
 package com.maicolimaguerrieri.springbootjava.domain;
 
 import java.util.UUID;
-
 import javax.validation.constraints.Email;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import com.maicolimaguerrieri.springbootjava.application.api.associado.AssociadoNovoRequest;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
