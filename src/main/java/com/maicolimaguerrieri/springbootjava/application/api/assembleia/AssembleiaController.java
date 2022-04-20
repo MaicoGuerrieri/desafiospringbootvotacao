@@ -3,6 +3,7 @@ package com.maicolimaguerrieri.springbootjava.application.api.assembleia;
 import javax.validation.Valid;
 
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +21,7 @@ public class AssembleiaController implements AssembleiaAPI{
 	private AssembleiaApplicationService assembleiaApplicationService;
 
 	@Override
-	public AssembleiaCriadoResponse novaAssembleia(@Valid AssembleiaNovoRequest assembleiaNova) {
+	public AssembleiaCriadoResponse novaAssembleia(@Valid @RequestBody AssembleiaNovoRequest assembleiaNova) {
 		log.info("[start] AssembleiaController - novaAssembleia");
 		AssembleiaCriadoResponse assembleiaCriada = assembleiaApplicationService.novaAssembleia(assembleiaNova);
 		log.info("[finish] AssembleiaController - novaAssembleia");

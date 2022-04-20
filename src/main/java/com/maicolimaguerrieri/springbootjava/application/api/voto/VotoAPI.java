@@ -1,4 +1,4 @@
-package com.maicolimaguerrieri.springbootjava.application.api.assembleia;
+package com.maicolimaguerrieri.springbootjava.application.api.voto;
 
 import javax.validation.Valid;
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 
 
-public interface AssembleiaAPI {
+public interface VotoAPI {
 	@PostMapping 
     @ResponseStatus(code = HttpStatus.CREATED) 
-   AssembleiaCriadoResponse novaAssembleia(@RequestBody @Valid AssembleiaNovoRequest novaAssembleia);
+    VotoCriadoResponse novoVoto(@RequestBody @Valid VotoNovoRequest votoNovo);
 
 }

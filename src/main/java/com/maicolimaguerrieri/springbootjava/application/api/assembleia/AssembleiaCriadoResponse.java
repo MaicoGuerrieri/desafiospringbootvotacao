@@ -23,7 +23,7 @@ public class AssembleiaCriadoResponse {
 	private List<Associado> associados = new ArrayList<>();
 
 	public AssembleiaCriadoResponse(Assembleia assembleia) {
-		this.idAssembleia = assembleia.getId();
+		this.idAssembleia = assembleia.getIdAssembleia();
 		this.titulo = assembleia.getTitulo();
 		this.objetivo = assembleia.getObjetivo();
 		this.dataAberturaAssembleia = assembleia.getDataAberturaAssembleia();

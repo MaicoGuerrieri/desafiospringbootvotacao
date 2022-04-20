@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 public class Assembleia {
 
 	@Id
-	private UUID id;
+	private UUID idAssembleia;
 	private String titulo;
 
 	private String objetivo;
@@ -34,8 +34,9 @@ public class Assembleia {
 
 	private List<Associado> associados = new ArrayList<>();
 	
+	
 	public Assembleia(AssembleiaNovoRequest assembleia) {
-		this.id = UUID.randomUUID();
+		this.idAssembleia = UUID.randomUUID();
 		this.titulo = assembleia.getTitulo();
 		this.objetivo = assembleia.getObjetivo();
 		this.dataAberturaAssembleia = assembleia.getDataAberturaAssembleia();

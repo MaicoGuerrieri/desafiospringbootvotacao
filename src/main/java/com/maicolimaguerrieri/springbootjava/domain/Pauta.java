@@ -2,9 +2,15 @@ package com.maicolimaguerrieri.springbootjava.domain;
 
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
+
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 import org.springframework.data.mongodb.core.mapping.MongoId;
+
+import com.maicolimaguerrieri.springbootjava.application.api.pauta.PautaNovoRequest;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +24,8 @@ import lombok.NoArgsConstructor;
 public class Pauta {
 	
 	@MongoId(targetType = FieldType.STRING)
-	private String id;
+	@Id
+	private UUID idPauta;
 
 	private String titulo;
 
@@ -33,6 +40,17 @@ public class Pauta {
 	private List<Voto> votos;
 	
 	private ResultadoVotacao resultado = ResultadoVotacao.AGUARDANDO;
+	
+	public Pauta(PautaNovoRequest novaPauta) {
+		this.idPauta = UUID.randomUUID();
+		this.titulo = novaPauta.getTitulo();
+		this.descricao = novaPauta.getDescricao();
+		this.dataAberturaPauta = novaPauta.getDataAberturaPauta(); 
+		this.autor = novaPauta.getAutor();
+		this.idAssembleia = novaPauta.getIdAssembleia();
+		this.votos = novaPauta.getVotos();
+		this.resultado = novaPauta.getResultado();
+	}
 
 
 }
