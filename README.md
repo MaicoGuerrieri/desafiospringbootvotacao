@@ -12,6 +12,13 @@ Acessando o postman;
 
 POST: http://localhost:8082/springboot/api/v1/associado
 
+{
+     "nome": "Nome",
+    "cpf": "Cpf",
+    "email": "Email",
+    "sexo": "FEMININO"
+}
+
 http://localhost:8082/springboot/api/v1/assembleia
 
 http://localhost:8082/springboot/api/v1/pauta
