@@ -16,7 +16,7 @@ POST: http://localhost:8082/springboot/api/v1/associado
      "nome": "Nome",
     "cpf": "Cpf",
     "email": "Email",
-    "sexo": "FEMININO"
+    "sexo": "Sexo"
 }
 
 http://localhost:8082/springboot/api/v1/assembleia
